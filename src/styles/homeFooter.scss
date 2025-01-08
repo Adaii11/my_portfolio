@@ -1,0 +1,220 @@
+@import '../styles/base.scss';
+
+//keyframes animation
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+* {
+    font-family: 'Roboto';
+    color: $offWhite;
+}
+
+
+.footer-root {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    
+
+    .footer-flex {
+        width: 90%;
+        margin: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 5;
+        animation: phase-in 2s;
+
+        @include xl {
+            width: 50%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .quote-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            @include xl {
+                
+            }
+
+            .quote {
+                height: 7rem;
+                align-content: center;
+                text-align: center;
+                h2 {
+                    background-color: black;
+                    color: $offWhite;
+                    font-weight: 300;
+                }
+            }
+
+            .author {
+                text-align: right;
+                margin-right: 1rem;
+                h4 {
+                    background-color: black;
+                    font-weight: 300;
+                    color: $offWhite;
+                }
+            }
+        }
+
+        .social {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+
+            @include lg {
+                align-items: center;
+                gap: 20px;
+            }
+
+            a {
+                padding: 1rem;
+                border: 1px solid $offWhite;
+                border-radius: 50%;
+                background: linear-gradient(to right, $offWhite 50%, black 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all 0.8s ease;
+
+                svg {
+                    fill: $offWhite;
+                }
+
+                &:hover {
+                    background-position: left bottom;
+
+                    .linkedin {
+                        fill: rgb(10, 102, 194)
+                    }
+
+                    .github {
+                        fill: rgb(36,41,46);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .footer-bottom {
+        color: $offWhite;
+        margin-top: 3rem;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+
+
+    /*
+    .footer-flex {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        .quote-container {
+            display: flex;
+            flex-direction: column;
+
+            .quote {
+                height: 4rem;
+                color: $offWhite;
+                text-align: center;
+                align-content: center;
+
+                h2 {
+                    background-color: black;
+                    color: $offWhite;
+                    font-weight: 300;
+                }
+            }
+
+        }
+
+        .social {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+
+            a {
+                padding: 1rem;
+                border: 1px solid $offWhite;
+                border-radius: 50%;
+                background: linear-gradient(to right, $offWhite 50%, black 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all 0.8s ease;
+
+                svg {
+                    fill: $offWhite;
+                }
+
+                &:hover {
+                    background-position: left bottom;
+
+                    .linkedin {
+                        fill: rgb(10, 102, 194)
+                    }
+
+                    .github {
+                        fill: rgb(36,41,46);
+                    }
+                }
+
+            }
+            
+        }
+
+    }
+
+    .footer-bottom {
+        color: $offWhite;
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    */
+}

@@ -1,0 +1,289 @@
+@import '../styles/base.scss';
+
+.about-root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    color: $offWhite;
+    font-family: 'Roboto';
+
+
+    .header {
+        width: 100%;
+        text-align: center;
+        color: $offWhite;
+        margin-top: 6rem;
+        z-index: 34;
+        transition: all 0.8s ease;
+        font-size: 3.5rem;
+        animation: phase-in 2s;
+
+        &::before {
+            content: '';
+            border-bottom: 14px solid $apexBlue;
+            width: 8rem;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index:-1;
+            border-bottom: 16px solid $apexBlue;
+            width: 12rem;
+            top: 4rem;
+            left: 2.2rem;
+            
+
+        }
+    }
+
+
+
+    .about-body {
+        margin-top: 4rem; 
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        animation: phase-in 2s;
+        
+
+        .about-container {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            
+            .about-image {
+                width: 25rem;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                transition: all 0.8s ease;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                    stroke: $offWhite;
+                    fill: black;
+                }
+
+            }
+
+            .about-description {
+                background-color: rgb(0, 0, 0, 0.7);
+                text-align: center;
+                
+                h2 {
+                    padding-bottom: 1rem;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+
+            @include lg {
+                width: 90%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                .about-image {
+                    width: 30rem;
+                    margin-left: 2rem;
+                    margin: 0;
+                }
+
+                .about-description {
+                    width: 40rem;
+                    margin: auto;
+                }
+
+            }
+
+            @include xl {
+                width: 90%;
+
+                .about-image {
+                    position: relative;
+                    left: 5%;
+                }
+            }
+
+            @media (min-width: 1800px) {
+                width: 60%;
+
+
+            }
+
+
+        }
+
+        .tech-stack {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.8s ease;
+
+            .tech-flexbox {
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+
+
+                .column {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    .skill {
+                        width: 4rem;
+                        height: auto;
+                        padding: 1rem;
+                        border: 1px solid $offWhite;
+                        border-radius: 1em;
+                        background-color: rgb(11, 11, 11);
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                }
+
+            }
+
+            .tech-description {
+                background-color: rgb(0, 0, 0, 0.7);
+                margin-top: 2rem;
+                text-align: center;
+                transition: all 0.8s ease;
+                h2 {
+                    padding-bottom: 1rem;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+            @include lg {
+                width: 90%;
+                flex-direction: row-reverse;
+                justify-content: center;
+                gap: 2rem;
+
+                .tech-description {
+                    display: block;
+                    width: 40rem;
+                    margin: auto;
+                    padding: 0;
+                    p {
+
+                    }
+                }
+                
+            }
+
+            @include xl {
+                width: 90%;
+                gap: 1rem;
+
+                .tech-flexbox {
+                    position: relative;
+                    right: 4%;
+                }
+                
+            }
+
+            @media (min-width: 1800px) {
+                width: 60%;
+
+                .tech-flexbox {
+                    margin-left: 2rem;
+                }
+            }
+
+        }
+
+
+        .my-resume {
+            padding-top: 2rem;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            
+
+            .resume-container {
+                margin: auto;
+                width: 23rem;
+                height: auto;
+
+                img {
+                    width: 100%; 
+                    height: auto;
+                    border-radius: 2em;
+                    border: 3px solid rgb(81,81,81)
+                }
+
+                @include lg {
+                    width: 34rem;
+                }
+
+                @include xl {
+                    width: 40rem;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .download {
+                    color: $offWhite;
+                    text-decoration: none;
+                    border: 1px solid $offWhite;
+                    padding: 0.5rem 1rem;
+                    border-radius: 2em;
+                    text-align: center;
+                    background: linear-gradient(to right, $blueHover 50%, black 50%);
+                    background-size: 200% 100%;
+                    background-position: right bottom;
+                    transition: all 0.8s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-position: left bottom;
+                        border-radius: 1px solid white;
+                        color: white;
+                        
+                    }
+
+                }
+            }
+
+
+        }
+
+    }
+}

@@ -1,0 +1,666 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 0) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-test {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-test {
+    color: pink;
+  }
+}
+
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav-root {
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  position: fixed;
+  font-family: "Roboto";
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.nav-root .navbar-container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.8s ease;
+}
+.nav-root .navbar-container .brand {
+  color: rgb(255, 255, 244);
+  padding: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.8s ease;
+  font-weight: 500;
+}
+.nav-root .navbar-container .brand:hover {
+  text-shadow: 2px 4px 12px white;
+}
+.nav-root .navbar-container .nav-links {
+  display: none;
+}
+.nav-root .navbar-container .nav-links.show {
+  animation: phase-in 1s;
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 14rem;
+  right: 2rem;
+  list-style: none;
+  background-color: black;
+}
+.nav-root .navbar-container .nav-links.show li a {
+  color: rgb(255, 255, 244);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.nav-root .navbar-container .nav-links.show li a:hover {
+  text-shadow: 2px 4px 12px white;
+}
+@media (min-width: 960px) {
+  .nav-root .navbar-container .nav-links {
+    display: flex;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .nav-root .navbar-container .nav-links li {
+    list-style: none;
+  }
+  .nav-root .navbar-container .nav-links li a {
+    color: rgb(255, 255, 244);
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 244);
+    padding: 0.5rem 1rem;
+    border-radius: 2em;
+    display: block;
+    width: 4rem;
+    text-align: center;
+    background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.8s ease;
+  }
+  .nav-root .navbar-container .nav-links li a:hover {
+    background-position: left bottom;
+    border-radius: 1px solid white;
+    color: white;
+  }
+}
+.nav-root .navbar-container .nav-toggle {
+  display: block;
+  background-color: black;
+  padding: 1rem;
+  cursor: pointer;
+}
+.nav-root .navbar-container .nav-toggle .bar {
+  width: 28px;
+  height: 3px;
+  background-color: rgb(255, 255, 244);
+  margin: 4px 0;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.nav-root .navbar-container .nav-toggle .bar.open {
+  display: none;
+}
+.nav-root .navbar-container .nav-toggle:hover .bar {
+  box-shadow: 2px 3px 20px white;
+}
+.nav-root .navbar-container .nav-toggle.open .bar {
+  animation: phase-out 0.8s;
+}
+.nav-root .navbar-container .nav-toggle .exit {
+  display: none;
+  cursor: pointer;
+}
+.nav-root .navbar-container .nav-toggle .exit.close {
+  display: block;
+  width: 28px;
+  height: 25px;
+  animation: phase-in 1.2s;
+}
+.nav-root .navbar-container .nav-toggle .exit .x {
+  width: 28px;
+  height: 3px;
+  background-color: rgb(255, 255, 244);
+  transition: all 0.8s ease;
+}
+.nav-root .navbar-container .nav-toggle .exit .x:first-child {
+  margin-top: 1rem;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.nav-root .navbar-container .nav-toggle .exit .x:last-child {
+  margin-top: 1rem;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.nav-root .navbar-container .nav-toggle .exit .x:hover {
+  box-shadow: 2px 3px 20px white;
+}
+@media (min-width: 960px) {
+  .nav-root .navbar-container .nav-toggle {
+    display: none;
+  }
+}
+@media (min-width: 480px) {
+  .nav-root .navbar-container {
+    width: 90%;
+  }
+}
+@media (min-width: 720px) {
+  .nav-root .navbar-container {
+    width: 90%;
+  }
+}
+@media (min-width: 960px) {
+  .nav-root .navbar-container {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-root .navbar-container {
+    width: 70%;
+  }
+}
+
+/*
+@media (min-width: 0px) {
+    .nav-root {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+
+        .navbar-container {
+            width: 100%;
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.8s ease;
+
+            .brand {
+                color: $offWhite;
+                padding: 1rem;
+                margin-left: 1rem;
+                font-size: 2rem;
+                text-decoration: none;
+                transition: all 0.8s ease;
+                font-weight: 500;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 2px 4px 12px white;
+                }
+            }
+
+            .nav-links {
+                display: none;
+
+                &.show {
+                    animation: phase-in 0.8s;
+                    display: flex;
+                    gap: 15px;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    position: absolute;
+                    margin-top: 14rem;
+                    right: 2rem;
+                    list-style: none;
+                    background-color: black;
+
+                    li {
+                        a {
+                            color: $offWhite;
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+
+                            &:hover {
+                                color: white;
+                                text-shadow: 2px 4px 12px white;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .nav-toggle {
+                display: block;
+                background-color: black;
+                padding: 1rem;
+                margin-right: 1rem;
+                cursor: pointer;
+
+                .bar {
+                    width: 28px;
+                    height: 3px;
+                    background-color: $offWhite;
+                    margin: 4px 0;
+                    cursor: pointer;
+                    transition: all 0.8s ease;
+
+                    &.open {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    .bar {
+                        box-shadow: 2px 3px 20px white;
+                    }  
+                }
+
+                &.open {
+                    .bar {
+                        animation: phase-out 0.8s;
+                    }
+                }
+
+                //our Exit bars 
+
+                .exit {
+                    display: none;
+                    cursor: pointer;
+
+                    &.close {
+                        display: block;
+                        width: 28px;
+                        height: 25px;
+                        animation: phase-in 1.2s;
+                    }
+
+                    .x {
+                        width: 28px;
+                        height: 3px;
+                        background-color: $offWhite;
+                        transition: all 0.8s ease;
+
+
+                        &:first-child {
+                            margin-top: 1rem;
+                            position: absolute;
+                            transform: rotate(45deg);
+                        }
+
+                        &:last-child {
+                            margin-top: 1rem;
+                            position: absolute;
+                            transform: rotate(-45deg);
+                        }
+
+                        &:hover {
+
+                            box-shadow: 2px 3px 20px white;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+
+//below 768, we will switch to the hamburger menu icon
+@media (min-width: 820px) {
+
+    .nav-root {
+        .navbar-container {
+            .nav-links {
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        border: 1px solid $offWhite;
+                        padding: 0.5rem 1rem;
+                        border-radius: 2em;
+                        display: block;
+                        width: 4rem;
+                        text-align: center;
+                        background: linear-gradient(to right, $blueHover 50%, black 50%);
+                        background-size: 200% 100%;
+                        background-position: right bottom;
+                        transition: all 0.8s ease;
+
+                        &:hover {
+                            background-position: left bottom;
+                            border-radius: 1px solid white;
+                            color: white;
+
+                        }
+                    }
+                }
+
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-root {
+        .navbar-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-root {
+        .navbar-container {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: 1536px) {
+    .nav-root {
+        .navbar-container {
+            width: 60%;
+        }
+    }
+}
+
+
+/*
+@media (min-width: 0px) {
+
+    .navbar-container {
+        width: 100%;
+        display: flex;
+        top: 0;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+        transition: all 0.8s ease;
+
+        .brand {
+            color: $offWhite;
+            padding: 1rem;
+            margin-left: 1rem;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all 0.8s ease;
+            font-weight: 500;
+            &:hover {
+                color: white;
+                text-shadow: 2px 4px 12px white;
+            }
+        }
+
+        .nav-links {
+            display: none;
+
+            &.show {
+                animation: phase-in 0.8s;
+                display: flex;
+                gap: 15px;
+                align-items: flex-end;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 14rem;
+                right: 2rem;
+                list-style: none;
+                background-color: black;
+
+                li {
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: white;
+                            text-shadow: 2px 4px 12px white;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .nav-toggle {
+            display: block;
+            background-color: black;
+            padding: 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+
+            .bar {
+                width: 28px;
+                height: 3px;
+                background-color: $offWhite;
+                margin: 4px 0;
+                cursor: pointer;
+                transition: all 0.8s ease;
+
+                &.open {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                .bar {
+                    box-shadow: 2px 3px 20px white;
+                }  
+            }
+
+            &.open {
+                .bar {
+                    animation: phase-out 0.8s;
+                }
+            }
+
+            //our Exit bars 
+
+            .exit {
+                display: none;
+                cursor: pointer;
+
+                &.close {
+                    display: block;
+                    width: 28px;
+                    height: 25px;
+                    animation: phase-in 1.2s;
+                }
+
+                .x {
+                    width: 28px;
+                    height: 3px;
+                    background-color: $offWhite;
+                    transition: all 0.8s ease;
+
+
+                    &:first-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+
+                        box-shadow: 2px 3px 20px white;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+
+}
+
+@media (min-width: 576px) {
+
+}
+
+
+//below 768, we will switch to the hamburger menu icon
+@media (min-width: 820px) {
+    .navbar-container {
+
+        .nav-links {
+            margin-right: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $offWhite;
+                    text-decoration: none;
+                    border: 1px solid $offWhite;
+                    padding: 0.5rem 1rem;
+                    border-radius: 2em;
+                    display: block;
+                    width: 4rem;
+                    text-align: center;
+                    background: linear-gradient(to right, $blueHover 50%, black 50%);
+                    background-size: 200% 100%;
+                    background-position: right bottom;
+
+
+                    &:hover {
+                        background-position: left bottom;
+                        border-radius: 1px solid white;
+                        color: white;
+
+                    }
+                }
+            }
+
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .navbar-container {
+        width: 60%;
+    }
+} *//*# sourceMappingURL=navbar.css.map */

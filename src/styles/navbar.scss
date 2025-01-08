@@ -1,0 +1,645 @@
+@import '../styles/base.scss';
+
+//animation 
+@keyframes phase-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.nav-root {
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: fixed;
+    font-family: 'Roboto';
+    background-color: rgb(0,0,0,0.9);
+
+    .navbar-container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.8s ease;
+        
+
+        .brand {
+            color: $offWhite;
+            padding: 1rem;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all 0.8s ease;
+            font-weight: 500;
+
+            &:hover {
+                text-shadow: 2px 4px 12px white;
+            }
+        }
+
+        .nav-links {
+            display: none;
+
+            &.show {
+                animation: phase-in 1s;
+                display: flex;
+                gap: 15px;
+                align-items: flex-end;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 14rem;
+                right: 2rem;
+                list-style: none;
+                background-color: black;
+
+                li {
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+
+                        &:hover {
+                            text-shadow: 2px 4px 12px white;
+                        }
+                    }
+                }
+            }
+
+            @include lg {
+                display: flex;
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        border: 1px solid $offWhite;
+                        padding: 0.5rem 1rem;
+                        border-radius: 2em;
+                        display: block;
+                        width: 4rem;
+                        text-align: center;
+                        background: linear-gradient(to right, $blueHover 50%, black 50%);
+                        background-size: 200% 100%;
+                        background-position: right bottom;
+                        transition: all 0.8s ease;
+
+                        &:hover {
+                            background-position: left bottom;
+                            border-radius: 1px solid white;
+                            color: white;
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .nav-toggle {
+            display: block;
+            background-color: black;
+            padding: 1rem;
+            cursor: pointer;
+
+            .bar {
+                width: 28px;
+                height: 3px;
+                background-color: $offWhite;
+                margin: 4px 0;
+                cursor: pointer;
+                transition: all 0.8s ease;
+
+                &.open {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                .bar {
+                    box-shadow: 2px 3px 20px white;
+                }  
+            }
+
+            &.open {
+                .bar {
+                    animation: phase-out 0.8s;
+                }
+            }
+
+            //our Exit bars 
+
+            .exit {
+                display: none;
+                cursor: pointer;
+
+                &.close {
+                    display: block;
+                    width: 28px;
+                    height: 25px;
+                    animation: phase-in 1.2s;
+                }
+
+                .x {
+                    width: 28px;
+                    height: 3px;
+                    background-color: $offWhite;
+                    transition: all 0.8s ease;
+                    
+
+                    &:first-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+                        
+                        box-shadow: 2px 3px 20px white;
+                    }
+                }
+            }
+
+            @include lg {
+                display: none;
+            }
+
+
+        }
+
+
+        @include sm {
+            width: 90%;
+        }
+
+        @include md {
+            width: 90%;
+        }
+
+        @include lg {
+            width: 90%;
+        }
+
+        @include xl {
+            width: 70%;
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+/*
+@media (min-width: 0px) {
+    .nav-root {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+
+        .navbar-container {
+            width: 100%;
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.8s ease;
+
+            .brand {
+                color: $offWhite;
+                padding: 1rem;
+                margin-left: 1rem;
+                font-size: 2rem;
+                text-decoration: none;
+                transition: all 0.8s ease;
+                font-weight: 500;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 2px 4px 12px white;
+                }
+            }
+
+            .nav-links {
+                display: none;
+    
+                &.show {
+                    animation: phase-in 0.8s;
+                    display: flex;
+                    gap: 15px;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    position: absolute;
+                    margin-top: 14rem;
+                    right: 2rem;
+                    list-style: none;
+                    background-color: black;
+    
+                    li {
+                        a {
+                            color: $offWhite;
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+    
+                            &:hover {
+                                color: white;
+                                text-shadow: 2px 4px 12px white;
+                            }
+                        }
+                    }
+    
+                }
+    
+            }
+
+            .nav-toggle {
+                display: block;
+                background-color: black;
+                padding: 1rem;
+                margin-right: 1rem;
+                cursor: pointer;
+    
+                .bar {
+                    width: 28px;
+                    height: 3px;
+                    background-color: $offWhite;
+                    margin: 4px 0;
+                    cursor: pointer;
+                    transition: all 0.8s ease;
+    
+                    &.open {
+                        display: none;
+                    }
+                }
+    
+                &:hover {
+                    .bar {
+                        box-shadow: 2px 3px 20px white;
+                    }  
+                }
+    
+                &.open {
+                    .bar {
+                        animation: phase-out 0.8s;
+                    }
+                }
+    
+                //our Exit bars 
+    
+                .exit {
+                    display: none;
+                    cursor: pointer;
+    
+                    &.close {
+                        display: block;
+                        width: 28px;
+                        height: 25px;
+                        animation: phase-in 1.2s;
+                    }
+    
+                    .x {
+                        width: 28px;
+                        height: 3px;
+                        background-color: $offWhite;
+                        transition: all 0.8s ease;
+                        
+    
+                        &:first-child {
+                            margin-top: 1rem;
+                            position: absolute;
+                            transform: rotate(45deg);
+                        }
+    
+                        &:last-child {
+                            margin-top: 1rem;
+                            position: absolute;
+                            transform: rotate(-45deg);
+                        }
+    
+                        &:hover {
+                            
+                            box-shadow: 2px 3px 20px white;
+                        }
+                    }
+                }
+    
+            }
+
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    
+}
+
+
+//below 768, we will switch to the hamburger menu icon
+@media (min-width: 820px) {
+
+    .nav-root {
+        .navbar-container {
+            .nav-links {
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        border: 1px solid $offWhite;
+                        padding: 0.5rem 1rem;
+                        border-radius: 2em;
+                        display: block;
+                        width: 4rem;
+                        text-align: center;
+                        background: linear-gradient(to right, $blueHover 50%, black 50%);
+                        background-size: 200% 100%;
+                        background-position: right bottom;
+                        transition: all 0.8s ease;
+
+                        &:hover {
+                            background-position: left bottom;
+                            border-radius: 1px solid white;
+                            color: white;
+                            
+                        }
+                    }
+                }
+
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-root {
+        .navbar-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-root {
+        .navbar-container {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: 1536px) {
+    .nav-root {
+        .navbar-container {
+            width: 60%;
+        }
+    }
+}
+
+
+/*
+@media (min-width: 0px) {
+
+    .navbar-container {
+        width: 100%;
+        display: flex;
+        top: 0;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+        transition: all 0.8s ease;
+
+        .brand {
+            color: $offWhite;
+            padding: 1rem;
+            margin-left: 1rem;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all 0.8s ease;
+            font-weight: 500;
+            &:hover {
+                color: white;
+                text-shadow: 2px 4px 12px white;
+            }
+        }
+        
+        .nav-links {
+            display: none;
+
+            &.show {
+                animation: phase-in 0.8s;
+                display: flex;
+                gap: 15px;
+                align-items: flex-end;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 14rem;
+                right: 2rem;
+                list-style: none;
+                background-color: black;
+
+                li {
+                    a {
+                        color: $offWhite;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: white;
+                            text-shadow: 2px 4px 12px white;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .nav-toggle {
+            display: block;
+            background-color: black;
+            padding: 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+
+            .bar {
+                width: 28px;
+                height: 3px;
+                background-color: $offWhite;
+                margin: 4px 0;
+                cursor: pointer;
+                transition: all 0.8s ease;
+
+                &.open {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                .bar {
+                    box-shadow: 2px 3px 20px white;
+                }  
+            }
+
+            &.open {
+                .bar {
+                    animation: phase-out 0.8s;
+                }
+            }
+
+            //our Exit bars 
+
+            .exit {
+                display: none;
+                cursor: pointer;
+
+                &.close {
+                    display: block;
+                    width: 28px;
+                    height: 25px;
+                    animation: phase-in 1.2s;
+                }
+
+                .x {
+                    width: 28px;
+                    height: 3px;
+                    background-color: $offWhite;
+                    transition: all 0.8s ease;
+                    
+
+                    &:first-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-child {
+                        margin-top: 1rem;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+                        
+                        box-shadow: 2px 3px 20px white;
+                    }
+                }
+            }
+
+        }
+
+
+        
+    }
+    
+}
+
+@media (min-width: 576px) {
+    
+}
+
+
+//below 768, we will switch to the hamburger menu icon
+@media (min-width: 820px) {
+    .navbar-container {
+
+        .nav-links {
+            margin-right: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $offWhite;
+                    text-decoration: none;
+                    border: 1px solid $offWhite;
+                    padding: 0.5rem 1rem;
+                    border-radius: 2em;
+                    display: block;
+                    width: 4rem;
+                    text-align: center;
+                    background: linear-gradient(to right, $blueHover 50%, black 50%);
+                    background-size: 200% 100%;
+                    background-position: right bottom;
+                    
+
+                    &:hover {
+                        background-position: left bottom;
+                        border-radius: 1px solid white;
+                        color: white;
+                        
+                    }
+                }
+            }
+
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .navbar-container {
+        width: 60%;
+    }
+} */
+

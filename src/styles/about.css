@@ -1,0 +1,305 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 0) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-test {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-test {
+    color: pink;
+  }
+}
+
+.about-root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  color: rgb(255, 255, 244);
+  font-family: "Roboto";
+}
+.about-root .header {
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 244);
+  margin-top: 6rem;
+  z-index: 34;
+  transition: all 0.8s ease;
+  font-size: 3.5rem;
+  animation: phase-in 2s;
+}
+.about-root .header::before {
+  content: "";
+  border-bottom: 14px solid rgb(39, 104, 255);
+  width: 8rem;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: -1;
+  border-bottom: 16px solid rgb(39, 104, 255);
+  width: 12rem;
+  top: 4rem;
+  left: 2.2rem;
+}
+.about-root .about-body {
+  margin-top: 4rem;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  animation: phase-in 2s;
+}
+.about-root .about-body .about-container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.about-root .about-body .about-container .about-image {
+  width: 25rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.8s ease;
+}
+.about-root .about-body .about-container .about-image svg {
+  width: 100%;
+  height: auto;
+  stroke: rgb(255, 255, 244);
+  fill: black;
+}
+.about-root .about-body .about-container .about-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+.about-root .about-body .about-container .about-description h2 {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+.about-root .about-body .about-container .about-description p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 960px) {
+  .about-root .about-body .about-container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-root .about-body .about-container .about-image {
+    width: 30rem;
+    margin-left: 2rem;
+    margin: 0;
+  }
+  .about-root .about-body .about-container .about-description {
+    width: 40rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .about-root .about-body .about-container {
+    width: 90%;
+  }
+  .about-root .about-body .about-container .about-image {
+    position: relative;
+    left: 5%;
+  }
+}
+@media (min-width: 1800px) {
+  .about-root .about-body .about-container {
+    width: 60%;
+  }
+}
+.about-root .about-body .tech-stack {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.8s ease;
+}
+.about-root .about-body .tech-stack .tech-flexbox {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.about-root .about-body .tech-stack .tech-flexbox .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.about-root .about-body .tech-stack .tech-flexbox .column .skill {
+  width: 4rem;
+  height: auto;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 244);
+  border-radius: 1em;
+  background-color: rgb(11, 11, 11);
+}
+.about-root .about-body .tech-stack .tech-flexbox .column .skill img {
+  width: 100%;
+  height: auto;
+}
+.about-root .about-body .tech-stack .tech-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+  text-align: center;
+  transition: all 0.8s ease;
+}
+.about-root .about-body .tech-stack .tech-description h2 {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+.about-root .about-body .tech-stack .tech-description p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 960px) {
+  .about-root .about-body .tech-stack {
+    width: 90%;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .about-root .about-body .tech-stack .tech-description {
+    display: block;
+    width: 40rem;
+    margin: auto;
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .about-root .about-body .tech-stack {
+    width: 90%;
+    gap: 1rem;
+  }
+  .about-root .about-body .tech-stack .tech-flexbox {
+    position: relative;
+    right: 4%;
+  }
+}
+@media (min-width: 1800px) {
+  .about-root .about-body .tech-stack {
+    width: 60%;
+  }
+  .about-root .about-body .tech-stack .tech-flexbox {
+    margin-left: 2rem;
+  }
+}
+.about-root .about-body .my-resume {
+  padding-top: 2rem;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-root .about-body .my-resume .resume-container {
+  margin: auto;
+  width: 23rem;
+  height: auto;
+}
+.about-root .about-body .my-resume .resume-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  border: 3px solid rgb(81, 81, 81);
+}
+@media (min-width: 960px) {
+  .about-root .about-body .my-resume .resume-container {
+    width: 34rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-root .about-body .my-resume .resume-container {
+    width: 40rem;
+  }
+}
+.about-root .about-body .my-resume .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.about-root .about-body .my-resume .button-container .download {
+  color: rgb(255, 255, 244);
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 244);
+  padding: 0.5rem 1rem;
+  border-radius: 2em;
+  text-align: center;
+  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+.about-root .about-body .my-resume .button-container .download:hover {
+  background-position: left bottom;
+  border-radius: 1px solid white;
+  color: white;
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,116 @@
+//Fonts
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../assets/fonts/roboto-v30-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/roboto-v30-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/roboto-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/roboto-v30-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+//Color variables
+$offWhite: rgb(255,255,244);
+$blueHover: rgb(50, 115, 255);
+$apexBlue: rgb(39, 104, 255);
+
+//Breakpoints mixins
+$breakpoints: (
+    'xs': 0,
+    'sm': 480px,
+    'md': 720px,
+    'lg': 960px,
+    'xl': 1200px,
+);
+
+//phase in content animation
+@keyframes phase-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//breakpoint identifiers
+@mixin xs {
+    @media (min-width: map-get($breakpoints, 'xs')) {
+        @content;
+    }
+};
+
+@mixin sm {
+    @media (min-width: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+};
+
+@mixin md {
+    @media (min-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+};
+
+@mixin lg {
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+};
+
+@mixin xl {
+    @media (min-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+};
+
+@mixin breakpoint($bp: 0) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+//test
+.responsive-test {
+    @include xs {
+        color: red;
+    };
+    @include sm {
+        color: blue;
+    };
+    @include md {
+        color: green;
+    };
+    @include lg {
+        color: purple;
+    };
+    @include xl {
+        color: orange;
+    };
+    @include breakpoint(1400px) {
+        color: pink;
+    };
+};

@@ -1,0 +1,263 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 0) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-test {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-test {
+    color: pink;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+* {
+  font-family: "Roboto";
+  color: rgb(255, 255, 244);
+}
+
+.footer-root {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Roboto";
+  /*
+  .footer-flex {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      .quote-container {
+          display: flex;
+          flex-direction: column;
+
+          .quote {
+              height: 4rem;
+              color: $offWhite;
+              text-align: center;
+              align-content: center;
+
+              h2 {
+                  background-color: black;
+                  color: $offWhite;
+                  font-weight: 300;
+              }
+          }
+
+      }
+
+      .social {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          justify-content: center;
+
+          a {
+              padding: 1rem;
+              border: 1px solid $offWhite;
+              border-radius: 50%;
+              background: linear-gradient(to right, $offWhite 50%, black 50%);
+              background-size: 200% 100%;
+              background-position: right bottom;
+              transition: all 0.8s ease;
+
+              svg {
+                  fill: $offWhite;
+              }
+
+              &:hover {
+                  background-position: left bottom;
+
+                  .linkedin {
+                      fill: rgb(10, 102, 194)
+                  }
+
+                  .github {
+                      fill: rgb(36,41,46);
+                  }
+              }
+
+          }
+
+      }
+
+  }
+
+  .footer-bottom {
+      color: $offWhite;
+      margin-top: 2rem;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 1rem;
+  }
+
+  */
+}
+.footer-root .footer-flex {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+  animation: phase-in 2s;
+}
+@media (min-width: 1200px) {
+  .footer-root .footer-flex {
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-root .footer-flex .quote-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer-root .footer-flex .quote-container .quote {
+  height: 7rem;
+  align-content: center;
+  text-align: center;
+}
+.footer-root .footer-flex .quote-container .quote h2 {
+  background-color: black;
+  color: rgb(255, 255, 244);
+  font-weight: 300;
+}
+.footer-root .footer-flex .quote-container .author {
+  text-align: right;
+  margin-right: 1rem;
+}
+.footer-root .footer-flex .quote-container .author h4 {
+  background-color: black;
+  font-weight: 300;
+  color: rgb(255, 255, 244);
+}
+.footer-root .footer-flex .social {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+@media (min-width: 960px) {
+  .footer-root .footer-flex .social {
+    align-items: center;
+    gap: 20px;
+  }
+}
+.footer-root .footer-flex .social a {
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 244);
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(255, 255, 244) 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease;
+}
+.footer-root .footer-flex .social a svg {
+  fill: rgb(255, 255, 244);
+}
+.footer-root .footer-flex .social a:hover {
+  background-position: left bottom;
+}
+.footer-root .footer-flex .social a:hover .linkedin {
+  fill: rgb(10, 102, 194);
+}
+.footer-root .footer-flex .social a:hover .github {
+  fill: rgb(36, 41, 46);
+}
+.footer-root .footer-bottom {
+  color: rgb(255, 255, 244);
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=homeFooter.css.map */

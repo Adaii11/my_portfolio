@@ -1,0 +1,321 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 0) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-test {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-test {
+    color: pink;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.sp-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+  animation: phase-in 2s;
+}
+.sp-wrapper .flex-container {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.8s ease;
+}
+.sp-wrapper .flex-container .flex-1 {
+  max-width: 18rem;
+  margin-inline: auto;
+  transition: all 0.8s ease;
+}
+.sp-wrapper .flex-container .flex-1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3em;
+}
+@media (min-height: 940px) {
+  .sp-wrapper .flex-container .flex-1 {
+    margin-top: 2rem;
+  }
+}
+@media (min-height: 980px) {
+  .sp-wrapper .flex-container .flex-1 {
+    margin-top: 4rem;
+  }
+}
+@media (min-height: 1020px) {
+  .sp-wrapper .flex-container .flex-1 {
+    margin-top: 6rem;
+  }
+}
+@media (min-height: 1060px) {
+  .sp-wrapper .flex-container .flex-1 {
+    margin-top: 8rem;
+  }
+}
+@media (min-height: 1100px) {
+  .sp-wrapper .flex-container .flex-1 {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 480px) {
+  .sp-wrapper .flex-container .flex-1 {
+    max-width: 22rem;
+  }
+}
+@media (min-width: 720px) {
+  .sp-wrapper .flex-container .flex-1 {
+    max-width: 26rem;
+  }
+}
+.sp-wrapper .flex-container .flex-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+.sp-wrapper .flex-container .flex-2 .row {
+  text-align: center;
+}
+.sp-wrapper .flex-container .flex-2 .row h1 {
+  color: rgb(255, 255, 244);
+}
+.sp-wrapper .flex-container .flex-2 .row h1 .highlight {
+  color: rgb(39, 104, 255);
+}
+.sp-wrapper .flex-container .flex-2 .row h2 {
+  color: rgb(255, 255, 244);
+}
+.sp-wrapper .flex-container .flex-2 .row h2 .highlight {
+  color: rgb(39, 104, 255);
+}
+.sp-wrapper .flex-container .flex-2 .row a {
+  color: rgb(255, 255, 244);
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 244);
+  border-radius: 3em;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease;
+}
+.sp-wrapper .flex-container .flex-2 .row a:hover {
+  background-position: left bottom;
+  border-radius: 1px solid white;
+  color: white;
+}
+.sp-wrapper .flex-container .flex-2 .row:last-child {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+@media (min-height: 940px) {
+  .sp-wrapper .flex-container .flex-2 {
+    margin-top: 2rem;
+  }
+}
+@media (min-height: 980px) {
+  .sp-wrapper .flex-container .flex-2 {
+    margin-top: 4rem;
+  }
+}
+.sp-wrapper .footer-flex {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+}
+.sp-wrapper .footer-flex .quote-container {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  /*
+  text-align: right;
+      margin-right: 2rem;
+      h4 {
+          background-color: black;
+          font-weight: 300;
+          color: $offWhite;
+      }
+  */
+}
+.sp-wrapper .footer-flex .quote-container .quote {
+  height: 9rem;
+  align-content: center;
+  text-align: center;
+}
+.sp-wrapper .footer-flex .quote-container .quote h2 {
+  background-color: black;
+  color: rgb(255, 255, 244);
+  font-weight: 300;
+}
+.sp-wrapper .footer-flex .quote-container .author {
+  width: 100%;
+  height: auto;
+}
+.sp-wrapper .footer-flex .quote-container .author h4 {
+  transition: all 0.8s ease;
+  background-color: black;
+  font-weight: 300;
+  color: rgb(255, 255, 244);
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 14rem;
+}
+@media (min-width: 445px) {
+  .sp-wrapper .footer-flex .quote-container .author h4 {
+    margin-left: 18rem;
+  }
+}
+@media (min-width: 635px) {
+  .sp-wrapper .footer-flex .quote-container .author h4 {
+    margin-left: 26rem;
+  }
+}
+@media (min-width: 480px) {
+  .sp-wrapper .footer-flex .quote-container {
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 720px) {
+  .sp-wrapper .footer-flex .quote-container {
+    margin-top: 3rem;
+  }
+}
+.sp-wrapper .footer-flex .social {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.sp-wrapper .footer-flex .social a {
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 244);
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(255, 255, 244) 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease;
+}
+.sp-wrapper .footer-flex .social a svg {
+  fill: rgb(255, 255, 244);
+}
+.sp-wrapper .footer-flex .social a:hover {
+  background-position: left bottom;
+}
+.sp-wrapper .footer-flex .social a:hover .linkedin {
+  fill: rgb(10, 102, 194);
+}
+.sp-wrapper .footer-flex .social a:hover .github {
+  fill: rgb(36, 41, 46);
+}
+@media (min-width: 480px) {
+  .sp-wrapper .footer-flex .social {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 720px) {
+  .sp-wrapper .footer-flex .social {
+    margin-top: 2rem;
+  }
+}
+.sp-wrapper .footer-bottom {
+  color: rgb(255, 255, 244);
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 480px) {
+  .sp-wrapper .footer-bottom {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 720px) {
+  .sp-wrapper .footer-bottom {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 960px) {
+  .sp-wrapper {
+    display: none;
+  }
+}
+@media (min-height: 0px) and (max-height: 950px) {
+  .sp-wrapper {
+    display: block;
+  }
+}/*# sourceMappingURL=spWrapper-home.css.map */
