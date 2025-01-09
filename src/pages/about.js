@@ -25,14 +25,14 @@ const About = () => {
             <div className="about-body">
                 <div className="about-container">
                     <div className="about-image">
-                        <svg width="20rem" height="20rem" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="personIconTitle" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#000000"> 
+                        <svg width="20rem" height="20rem" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="personIconTitle" strokeWidth="0.3" strokeLinecap="square" strokeLinejoin="miter" fill="none" color="#000000"> 
                             <title id="personIconTitle">Person</title> 
                             <path d="M4,20 C4,17 8,17 10,15 C11,14 8,14 8,9 C8,5.667 9.333,4 12,4 C14.667,4 16,5.667 16,9 C16,14 13,14 14,15 C16,17 20,17 20,20"/> 
                         </svg>
                     </div>
                     <div className="about-description">
                         <h2>Background</h2>
-                        <p>I'm a self-taught developer with a B.S. In Computer Science. I'm passionate about building clean and delightful web applications. When I am not developing, I love playing video games and listening to unique soundtracks for inspiration. Additionally, I like working out and going for long walk to gain clarity for development.</p>
+                        <p>I'm a self-taught developer with a B.S. In Computer Science. I'm passionate about building clean and delightful web applications. When I am not developing, I love playing video games and listening to unique soundtracks for inspiration. Additionally, I like working out and going for long walks to gain clarity for development.</p>
                     </div>
                 </div>
                 <div className="tech-stack">
@@ -76,7 +76,7 @@ const About = () => {
                     </div>
                     <div className="tech-description">
                         <h2>Skills</h2>
-                        <p>I utilize numerous front-end technologies like Node.js, React, JavaScript, and Sass. I focus on responsiveness while also providing a seamless user experience. I'm committed to learning new technologies in pursuit to improve my craft.</p>
+                        <p>I utilize numerous technologies like Node.js, React, JavaScript, and Sass. I focus on responsiveness while also providing a seamless user experience. I'm committed to learning new technologies in pursuit to improve my craft.</p>
                     </div>
                 </div>
                 <div className="my-resume">

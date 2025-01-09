@@ -8,11 +8,13 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 const Intro = () => {
 
     const [typeEffect] = useTypewriter ({
-        words: ['software engineer', 'ux/ui designer','mobile developer'],
+        words: ['Software Developer', 'UI Designer', 'Tech Specialist'],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 50
     })
+
+    console.log(typeEffect);
 
 
     return (

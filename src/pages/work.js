@@ -1,7 +1,6 @@
 import Navbar from "../components/navbar";
 import PComponent from "../components/particles";
 import '../styles/work.css';
-import image1 from '../assets/images/profile-picture.png';
 import reactLogo from '../assets/images/pngwing.com-react.png';
 import nodejs from '../assets/images/pngwing.com-node.png';
 import sass from '../assets/images/pngwing.com-sass.png';
@@ -28,7 +27,7 @@ const Work = () => {
                     </div>
                     <div className="info">
                         <h2 className="title">Macro-Fit</h2>
-                        <h4 className="description">Track your progess with this CRUD full stack application. Manage your macros, calories to track progress on cutting or bulking.</h4>
+                        <h4 className="description">Track calories to calculate a surplus or a deficit. Log workout numbers for progressive overload. Making fitness simple for all.</h4>
                         <div className="tech">
                             <h4>Builts using</h4>
                             <div className="icons">
@@ -73,7 +72,7 @@ const Work = () => {
                     </div>
                     <div className="info">
                         <h2 className="title">Crypto Portal</h2>
-                        <h4 className="description">A portal that will show all your crypto needs using API's. This application is a simple dashboard to view all your crypto.</h4>
+                        <h4 className="description">A dashboard that highlights all of crypto using API/Rest API's</h4>
                         <div className="tech">
                             <h4>Builts using</h4>
                             <div className="icons">
@@ -118,7 +117,7 @@ const Work = () => {
                     </div>
                     <div className="info">
                         <h2 className="title">Password Locker</h2>
-                        <h4 className="description">Want to keep track of passwords for you and your family memebers? I built this fullstack CRUD application that holds your information. a simple app that you download to hold the data locally.</h4>
+                        <h4 className="description">Want to keep track of passwords for you and your family members? This fullstack CRUD application holds the keys to your problem. A clean user interface where you can store data locally.</h4>
                         <div className="tech">
                             <h4>Builts using</h4>
                             <div className="icons">

@@ -82,16 +82,28 @@
 
             .row {
                  h1 {
+                    padding: 0rem 2rem;
                     color: $offWhite;
-                    .highlight {
-                        color: $apexBlue;
+                    
+                    &::before {
+                        content: '';
+                        border: 10px solid $apexBlue;
+                        position: relative;
+                        width: 7rem;
+                        display: block;
+                        top: 2.4rem;
+                        left: 7rem;
+                        z-index: -1;
                     }
+
                  }
 
                  h2 {
                     color: $offWhite;
 
                     .highlight {
+                        font-weight: 700;
+                        font-size:1.7rem;
                         color: $apexBlue;
                     }
                  }

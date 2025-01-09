@@ -58,7 +58,7 @@
             content: '';
             border: 14px solid $apexBlue;
             position: relative;
-            width: 12rem;
+            width: 10rem;
             display: block;
             top: 4rem;
             left: 14rem;
@@ -74,6 +74,8 @@
           display: block;
           font-size: 2.2rem;
           .highlight {
+            font-weight: 700;
+            font-size: 2.5;
             color: $apexBlue;
           }
         }

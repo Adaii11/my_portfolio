@@ -103,13 +103,19 @@
 
             .info {
                 margin-top: 1rem;
-                background-color: rgb(0,0,0,0.7);
+                //background-color: rgb(0,0,0,0.7);
 
                 .title {
                     margin-left: 2rem;
                     margin-top: 1rem;
                     color: $offWhite;
-                    text-shadow: 2px 4px 10px  $apexBlue;
+                    z-index: 200;
+
+
+                    
+
+                    
+
                 }
 
                 .description {
@@ -291,7 +297,6 @@
                     margin-left: 2rem;
                     margin-top: 1rem;
                     color: $offWhite;
-                    text-shadow: 2px 4px 10px  $apexBlue;
                     position: relative;
                 }
 

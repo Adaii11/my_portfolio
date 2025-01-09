@@ -147,16 +147,26 @@
   text-align: center;
 }
 .sp-wrapper .flex-container .flex-2 .row h1 {
+  padding: 0rem 2rem;
   color: rgb(255, 255, 244);
 }
-.sp-wrapper .flex-container .flex-2 .row h1 .highlight {
-  color: rgb(39, 104, 255);
+.sp-wrapper .flex-container .flex-2 .row h1::before {
+  content: "";
+  border: 10px solid rgb(45, 106, 250);
+  position: relative;
+  width: 7rem;
+  display: block;
+  top: 2.4rem;
+  left: 7rem;
+  z-index: -1;
 }
 .sp-wrapper .flex-container .flex-2 .row h2 {
   color: rgb(255, 255, 244);
 }
 .sp-wrapper .flex-container .flex-2 .row h2 .highlight {
-  color: rgb(39, 104, 255);
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: rgb(45, 106, 250);
 }
 .sp-wrapper .flex-container .flex-2 .row a {
   color: rgb(255, 255, 244);
@@ -164,7 +174,7 @@
   border: 1px solid rgb(255, 255, 244);
   border-radius: 3em;
   padding: 0.5rem 0.75rem;
-  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background: linear-gradient(to right, rgb(67, 127, 255) 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.8s ease;

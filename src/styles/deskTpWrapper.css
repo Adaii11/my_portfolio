@@ -118,23 +118,25 @@
 }
 .deskTp-wrapper .flex-container .flex-2 .row h1::before {
   content: "";
-  border: 14px solid rgb(39, 104, 255);
+  border: 14px solid rgb(45, 106, 250);
   position: relative;
-  width: 12rem;
+  width: 10rem;
   display: block;
   top: 4rem;
   left: 14rem;
   z-index: -1;
 }
 .deskTp-wrapper .flex-container .flex-2 .row h1 .highlight {
-  color: rgb(39, 104, 255);
+  color: rgb(45, 106, 250);
 }
 .deskTp-wrapper .flex-container .flex-2 .row h2 {
   display: block;
   font-size: 2.2rem;
 }
 .deskTp-wrapper .flex-container .flex-2 .row h2 .highlight {
-  color: rgb(39, 104, 255);
+  font-weight: 700;
+  font-size: 2.5;
+  color: rgb(45, 106, 250);
 }
 .deskTp-wrapper .flex-container .flex-2 .row a {
   display: block;
@@ -143,7 +145,7 @@
   border-radius: 3em;
   border: 1px solid rgb(255, 255, 244);
   padding: 0.5rem 1rem;
-  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background: linear-gradient(to right, rgb(67, 127, 255) 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.8s ease;

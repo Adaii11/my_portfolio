@@ -82,13 +82,13 @@
 }
 .workPage-root .header::before {
   content: "";
-  border-bottom: 14px solid rgb(39, 104, 255);
+  border-bottom: 14px solid rgb(45, 106, 250);
   width: 8rem;
   display: block;
   margin: 0 auto;
   position: relative;
   z-index: -1;
-  border-bottom: 16px solid rgb(39, 104, 255);
+  border-bottom: 16px solid rgb(45, 106, 250);
   width: 12rem;
   top: 4.2rem;
   left: 1.5rem;
@@ -142,13 +142,12 @@
 }
 .workPage-root .project .row-left .info {
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 .workPage-root .project .row-left .info .title {
   margin-left: 2rem;
   margin-top: 1rem;
   color: rgb(255, 255, 244);
-  text-shadow: 2px 4px 10px rgb(39, 104, 255);
+  z-index: 200;
 }
 .workPage-root .project .row-left .info .description {
   margin-left: auto;
@@ -204,7 +203,7 @@
   width: 6rem;
   text-align: center;
   cursor: pointer;
-  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background: linear-gradient(to right, rgb(67, 127, 255) 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.8s ease;
@@ -223,7 +222,7 @@
   .workPage-root .project .row-left .image-background {
     width: 15rem;
     height: 30rem;
-    background-color: rgb(39, 104, 255);
+    background-color: rgb(45, 106, 250);
     transition: all 0.8s ease;
     transform: skewY(10deg);
   }
@@ -292,7 +291,6 @@
   margin-left: 2rem;
   margin-top: 1rem;
   color: rgb(255, 255, 244);
-  text-shadow: 2px 4px 10px rgb(39, 104, 255);
   position: relative;
 }
 .workPage-root .project .row-right .info .description {
@@ -349,7 +347,7 @@
   width: 6rem;
   text-align: center;
   cursor: pointer;
-  background: linear-gradient(to right, rgb(50, 115, 255) 50%, black 50%);
+  background: linear-gradient(to right, rgb(67, 127, 255) 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.8s ease;
@@ -369,7 +367,7 @@
     left: 10rem;
     width: 15rem;
     height: 30rem;
-    background-color: rgb(39, 104, 255);
+    background-color: rgb(45, 106, 250);
     transition: all 0.8s ease;
     transform: skewY(-10deg);
   }

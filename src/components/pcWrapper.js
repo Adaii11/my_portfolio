@@ -7,7 +7,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 const PcWrapper = () => {
 
     const [typeEffect] = useTypewriter ({
-        words: ['software engineer', 'ux/ui designer','mobile developer'],
+        words: ['Software Developer', 'UI Designer', 'Tech Specialist'],
         loop: {},
         typeSpeed: 100,
         deleteSpeed: 50
@@ -45,10 +45,10 @@ const PcWrapper = () => {
                 </div>
                 <div className="flex-2">
                     <div className="row">
-                        <h1>Hello, I'm Adaii.</h1>
+                        <h1>Hello, I'm Adaii</h1>
                     </div>
                     <div className='row'>
-                        <h2>Im a <span className="highlight">{typeEffect}</span>.</h2>
+                        <h2>Im a {typeEffect} <span className="highlight">/</span></h2>
                     </div>
                     <div className="row">
                         <Link to="/work">View my work</Link>

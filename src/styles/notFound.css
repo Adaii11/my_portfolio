@@ -1,0 +1,115 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@keyframes phase-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (min-width: 0) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-test {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-test {
+    color: pink;
+  }
+}
+
+.not-found-root {
+  width: 100%;
+  height: auto;
+}
+.not-found-root .not-found-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.not-found-root h1 {
+  vertical-align: middle;
+  font-size: 3rem;
+  color: rgb(255, 255, 244); /* Red for emphasis */
+  font-family: "Roboto";
+  margin-bottom: 0.8rem;
+}
+.not-found-root h1::before {
+  content: "";
+  width: 20rem;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: -1;
+  border-bottom: 24px solid rgb(45, 106, 250);
+  top: 3.6rem;
+  left: 5.8rem;
+}
+.not-found-root p {
+  font-weight: 300;
+  background-color: black;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 244);
+  font-family: "Roboto";
+}
+.not-found-root a {
+  color: rgb(45, 106, 250);
+  text-decoration: none;
+  font-family: "Roboto";
+  transition: all 0.5s ease;
+}
+.not-found-root a:hover {
+  color: rgb(67, 127, 255);
+  text-decoration: underline;
+}/*# sourceMappingURL=notFound.css.map */
