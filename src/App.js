@@ -7,6 +7,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollTop from './components/scrollTop';
 
 
 
@@ -14,8 +15,9 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   
   return (
-    <Routes>
-      
+    <>
+    <ScrollTop />
+    <Routes>  
       <Route index path="/" element={<Home />} />
       <Route path="/work" element={<Work />} />
       <Route path="/contact" element={<Contact />} />
@@ -26,6 +28,7 @@ function App() {
       <Route path="/projects" element={<About />} />
       <Route path="/projects" element={<Contact />} />*/}
     </Routes>
+    </>
   );
 }
 
