@@ -32,7 +32,7 @@ const About = () => {
                     </div>
                     <div className="about-description">
                         <h2>Background</h2>
-                        <p>I'm a self-taught developer with a B.S. In Computer Science. I'm passionate about building clean and delightful web applications. When I am not developing, I love playing video games and listening to unique soundtracks for inspiration. Additionally, I like working out and going for long walks to gain clarity for development.</p>
+                        <p>I’m a self-taught developer with a B.S. in Computer Science. I’m passionate about building clean and delightful web applications. When I’m not coding, I enjoy playing video games and listening to unique soundtracks for inspiration. Additionally, I like working out and going for long walks to clear my mind and gain clarity for development.</p>
                     </div>
                 </div>
                 <div className="tech-stack">
@@ -76,7 +76,7 @@ const About = () => {
                     </div>
                     <div className="tech-description">
                         <h2>Skills</h2>
-                        <p>I utilize numerous technologies like Node.js, React, JavaScript, and Sass. I focus on responsiveness while also providing a seamless user experience. I'm committed to learning new technologies in pursuit to improve my craft.</p>
+                        <p>I work with a variety of technologies, including Node.js, React, JavaScript, and Sass. I focus on building responsive designs to ensure a seamless user experience. I'm committed to continuously learning new technologies to improve my craft.</p>
                     </div>
                 </div>
                 <div className="my-resume">

@@ -88,7 +88,7 @@ const Contact = () => {
             <Navbar />
             <PComponent />
             <h1 className="header">Contact</h1>
-            <p className="description">Let's build something together.<br />Provide details below and I will respond shortly.</p>
+            <p className="description">Let's build something great together.<br />Provide details below, and I'll get back to you shortly.</p>
             <form className="form-container" onSubmit={formik.handleSubmit}>
                 <div className="row">
                     <label className="label" htmlFor="firstName">First Name</label>
