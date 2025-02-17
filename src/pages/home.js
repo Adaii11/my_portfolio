@@ -3,6 +3,7 @@ import PComponent from "../components/particles";
 import PcWrapper from "../components/pcWrapper";
 import Navbar from "../components/navbar";
 
+
 const Home = () => {
 
     return (

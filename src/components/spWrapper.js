@@ -49,7 +49,7 @@ const SpWrapper = () => {
                         <h1>Hello, I'm <span className="highlight">Adaii</span>.</h1>
                     </div>
                     <div className='row'>
-                        <h2>Im a {typeEffect} <span className="highlight">/</span></h2>
+                        <h2>{typeEffect} <span className="highlight">/</span></h2>
                     </div>
                     <div className="row">
                         <Link to="/work">View my work</Link>

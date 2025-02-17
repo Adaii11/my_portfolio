@@ -15,20 +15,20 @@ import ScrollTop from './components/scrollTop';
 function App() {
   
   return (
-    <>
-    <ScrollTop />
-    <Routes>  
-      <Route index path="/" element={<Home />} />
-      <Route path="/work" element={<Work />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/*" element={<NotFound />} />
-      {/*
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/projects" element={<About />} />
-      <Route path="/projects" element={<Contact />} />*/}
-    </Routes>
-    </>
+    <div className="app-root">
+      <ScrollTop />
+      <Routes>  
+        <Route index path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} />
+        {/*
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<About />} />
+        <Route path="/projects" element={<Contact />} />*/}
+      </Routes>
+    </div>
   );
 }
 

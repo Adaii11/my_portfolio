@@ -40,6 +40,7 @@ const PComponent = () => {
       },
       fpsLimit: 60,
       interactivity: {
+        detectsOn: 'window',
         events: {
           onClick: {
             enable: true,
